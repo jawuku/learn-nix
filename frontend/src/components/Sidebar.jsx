@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { useApp } from "../context/AppContext";
-import { useCourse } from "../context/CourseContext";
-import { MOD_KEY } from "../lib/platform";
+import { useApp } from "../context/AppContext.jsx";
+import { useCourse } from "../context/CourseContext.jsx";
+import { MOD_KEY } from "../lib/platform.js";
 import { CheckCircle2, Circle, TerminalSquare, BookOpen, RotateCcw, Search, BookMarked, Check, ChevronsUpDown } from "lucide-react";
 import {
   AlertDialog,
@@ -13,7 +13,7 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from "./ui/alert-dialog";
+} from "./ui/alert-dialog.jsx";
 
 export function Sidebar({ current, view, onSelectLesson, onOpenRepl, onOpenPalette, onOpenCheatsheet, courses = [], activeCourseId, onSwitchCourse }) {
   const { progress, resetProgress } = useApp();

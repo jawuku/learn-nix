@@ -1,4 +1,4 @@
-import { nixCourse } from "./nixCourse";
+import { nixCourse } from "./nixCourse.js";
 
 // The Learn Nix course — the app's only hosted course. The course engine
 // (buildCourse in ./registry.js) stays generic: adding any future course is

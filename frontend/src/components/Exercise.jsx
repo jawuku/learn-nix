@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { Play, CheckCircle2, XCircle, Eye, RotateCcw, Lightbulb } from "lucide-react";
-import { CodeEditor } from "./CodeEditor";
-import { evaluateFor, checkExerciseFor } from "../lib/run";
-import { useApp } from "../context/AppContext";
-import { useCourse } from "../context/CourseContext";
+import { CodeEditor } from "./CodeEditor.jsx";
+import { evaluateFor, checkExerciseFor } from "../lib/run.js";
+import { useApp } from "../context/AppContext.jsx";
+import { useCourse } from "../context/CourseContext.jsx";
 
 export function Exercise({ lessonId, index, exercise }) {
   const { themeVars, dark, fontSize, markExercise, progress } = useApp();

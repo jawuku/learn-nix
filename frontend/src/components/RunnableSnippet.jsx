@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { Play, RotateCcw } from "lucide-react";
-import { CodeEditor } from "./CodeEditor";
-import { evaluateFor } from "../lib/run";
-import { useApp } from "../context/AppContext";
-import { useCourse } from "../context/CourseContext";
+import { CodeEditor } from "./CodeEditor.jsx";
+import { evaluateFor } from "../lib/run.js";
+import { useApp } from "../context/AppContext.jsx";
+import { useCourse } from "../context/CourseContext.jsx";
 
 export function RunnableSnippet({ code, lang }) {
   const { themeVars, dark, fontSize } = useApp();

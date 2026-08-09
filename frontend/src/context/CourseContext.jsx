@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect } from "react";
-import { setCourseNs } from "../lib/sci";
+import { setCourseNs } from "../lib/sci.js";
 
 const CourseContext = createContext(null);
 

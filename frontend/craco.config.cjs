@@ -1,4 +1,4 @@
-// craco.config.js
+// craco.config.cjs
 const path = require("path");
 require("dotenv").config();
 
@@ -64,8 +64,8 @@ let setupHealthEndpoints;
 let healthPluginInstance;
 
 if (config.enableHealthCheck) {
-  WebpackHealthPlugin = require("./plugins/health-check/webpack-health-plugin");
-  setupHealthEndpoints = require("./plugins/health-check/health-endpoints");
+  WebpackHealthPlugin = require("./plugins/health-check/webpack-health-plugin.cjs");
+  setupHealthEndpoints = require("./plugins/health-check/health-endpoints.cjs");
   healthPluginInstance = new WebpackHealthPlugin();
 }
 

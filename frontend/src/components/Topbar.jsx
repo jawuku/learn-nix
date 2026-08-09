@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useApp } from "../context/AppContext";
+import { useApp } from "../context/AppContext.jsx";
 import { Sun, Moon, Type, Minus, Plus, Share2, Check } from "lucide-react";
 
 export function Topbar({ title, getShareUrl }) {

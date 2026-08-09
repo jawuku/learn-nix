@@ -1,7 +1,7 @@
 import { useState, useMemo } from "react";
 import { Play, Search, BookMarked } from "lucide-react";
-import { evaluateFor } from "../lib/run";
-import { useCourse } from "../context/CourseContext";
+import { evaluateFor } from "../lib/run.js";
+import { useCourse } from "../context/CourseContext.jsx";
 
 function CheatRow({ item, course }) {
   const [result, setResult] = useState(null);

@@ -1,9 +1,9 @@
-import { buildCourse } from "./registry";
-import { nixPart1, REPL_TOUR } from "../data/nixPart1";
-import { nixPart2 } from "../data/nixPart2";
-import { nixPart3 } from "../data/nixPart3";
-import { NIX_CHEATSHEET } from "../data/nixCheatsheet";
-import { evalNix, runNixExerciseTests, nixReady, waitForNix } from "../lib/nix";
+import { buildCourse } from "./registry.js";
+import { nixPart1, REPL_TOUR } from "../data/nixPart1.js";
+import { nixPart2 } from "../data/nixPart2.js";
+import { nixPart3 } from "../data/nixPart3.js";
+import { NIX_CHEATSHEET } from "../data/nixCheatsheet.js";
+import { evalNix, runNixExerciseTests, nixReady, waitForNix } from "../lib/nix.js";
 
 // Assemble the curriculum in teaching order: modules 0–10, then reference.
 const LESSONS = [...nixPart1, ...nixPart2, ...nixPart3];

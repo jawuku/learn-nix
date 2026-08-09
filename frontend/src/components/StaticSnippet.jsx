@@ -1,6 +1,6 @@
-import { CodeEditor } from "./CodeEditor";
-import { useApp } from "../context/AppContext";
-import { useCourse } from "../context/CourseContext";
+import { CodeEditor } from "./CodeEditor.jsx";
+import { useApp } from "../context/AppContext.jsx";
+import { useCourse } from "../context/CourseContext.jsx";
 import { Eye } from "lucide-react";
 
 // A non-runnable, syntax-highlighted code sample (for preview/reference code

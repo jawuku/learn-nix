@@ -4,9 +4,9 @@
 // runtime (lib/sci.js); the Nix course routes to the Tvix-WASM evaluator
 // (lib/nix.js). Components call these helpers instead of the SCI functions
 // directly, so adding a future course is purely data + one evaluator module.
-import { evalClojure, runExerciseTests, sciReady, waitForSci } from "./sci";
-import { evalNix, runNixExerciseTests, nixReady, waitForNix } from "./nix";
-import { debug } from "./log";
+import { evalClojure, runExerciseTests, sciReady, waitForSci } from "./sci.js";
+import { evalNix, runNixExerciseTests, nixReady, waitForNix } from "./nix.js";
+import { debug } from "./log.js";
 
 // Async evaluation of `code` in the active course's runtime.
 // Returns a Promise of { ok, value, output, error }.

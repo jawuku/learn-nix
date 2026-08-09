@@ -1,6 +1,6 @@
 import { useMemo, useState, useEffect } from "react";
 import fuzzysort from "fuzzysort";
-import { Dialog, DialogContent, DialogTitle, DialogDescription } from "./ui/dialog";
+import { Dialog, DialogContent, DialogTitle, DialogDescription } from "./ui/dialog.jsx";
 import {
   Command,
   CommandInput,
@@ -8,10 +8,10 @@ import {
   CommandItem,
   CommandGroup,
   CommandEmpty,
-} from "./ui/command";
-import { useCourse } from "../context/CourseContext";
-import { useApp } from "../context/AppContext";
-import { MOD_KEY } from "../lib/platform";
+} from "./ui/command.jsx";
+import { useCourse } from "../context/CourseContext.jsx";
+import { useApp } from "../context/AppContext.jsx";
+import { MOD_KEY } from "../lib/platform.js";
 import {
   TerminalSquare,
   BookMarked,

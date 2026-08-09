@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useState, useCallback, useMemo } from "react";
-import { debug } from "../lib/log";
+import { debug } from "../lib/log.js";
 
 const DEFAULT_STORAGE_KEY = "parens_app_v1";
 

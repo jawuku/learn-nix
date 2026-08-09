@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import { useApp } from "../context/AppContext";
-import { useCourse } from "../context/CourseContext";
-import { COURSES } from "../course";
+import { useApp } from "../context/AppContext.jsx";
+import { useCourse } from "../context/CourseContext.jsx";
+import { COURSES } from "../course/index.js";
 import { Trophy, ArrowRight, X, Sparkles, PartyPopper } from "lucide-react";
-import { debug } from "../lib/log";
+import { debug } from "../lib/log.js";
 
 // Read a course's saved completion from its own localStorage bucket so we can
 // reason about the whole journey (not just the active course).

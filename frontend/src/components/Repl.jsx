@@ -1,11 +1,11 @@
 import { useState, useRef, useEffect } from "react";
 import { Play, Trash2, TerminalSquare, RotateCcw, Keyboard } from "lucide-react";
-import { CodeEditor } from "./CodeEditor";
-import { evaluateFor } from "../lib/run";
-import { splitReplBlocks } from "../lib/nix";
-import { getCourseNs } from "../lib/sci";
-import { useApp } from "../context/AppContext";
-import { useCourse } from "../context/CourseContext";
+import { CodeEditor } from "./CodeEditor.jsx";
+import { evaluateFor } from "../lib/run.js";
+import { splitReplBlocks } from "../lib/nix.js";
+import { getCourseNs } from "../lib/sci.js";
+import { useApp } from "../context/AppContext.jsx";
+import { useCourse } from "../context/CourseContext.jsx";
 
 const DEFAULT_WELCOME = "# Welcome to the REPL playground.\n# Type an expression and press Cmd/Ctrl + Enter to run it.\n1 + 2";
 

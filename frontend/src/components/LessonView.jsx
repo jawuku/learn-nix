@@ -1,10 +1,10 @@
 import { useRef, useState } from "react";
-import { RunnableSnippet } from "./RunnableSnippet";
-import { StaticSnippet } from "./StaticSnippet";
-import { ReagentSnippet } from "./ReagentSnippet";
-import { Exercise } from "./Exercise";
-import { useApp } from "../context/AppContext";
-import { useCourse } from "../context/CourseContext";
+import { RunnableSnippet } from "./RunnableSnippet.jsx";
+import { StaticSnippet } from "./StaticSnippet.jsx";
+import { ReagentSnippet } from "./ReagentSnippet.jsx";
+import { Exercise } from "./Exercise.jsx";
+import { useApp } from "../context/AppContext.jsx";
+import { useCourse } from "../context/CourseContext.jsx";
 import { ChevronLeft, ChevronRight, CheckCircle2, Dumbbell, Info, ArrowRight, TerminalSquare, ExternalLink } from "lucide-react";
 
 // Inline http(s):// URLs inside prose are auto-linked (case-insensitive).

@@ -1,4 +1,4 @@
-import { debug } from "./log";
+import { debug } from "./log.js";
 
 // Client-side Clojure evaluation using SCI (via the Scittle runtime).
 // Loaded from CDN in public/index.html as window.scittle.

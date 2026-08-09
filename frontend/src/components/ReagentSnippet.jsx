@@ -1,8 +1,8 @@
 import { useState, useEffect, useMemo } from "react";
 import { Play, RotateCcw } from "lucide-react";
-import { CodeEditor } from "./CodeEditor";
-import { renderReagent, reagentReady, waitForReagent } from "../lib/sci";
-import { useApp } from "../context/AppContext";
+import { CodeEditor } from "./CodeEditor.jsx";
+import { renderReagent, reagentReady, waitForReagent } from "../lib/sci.js";
+import { useApp } from "../context/AppContext.jsx";
 
 // A live, editable ClojureScript snippet whose last expression is a Reagent
 // component (in Hiccup form). It is mounted into a real DOM node so learners
