@@ -43,7 +43,7 @@ browser evaluator were swapped.
 - **Reference Cheat Sheet** per course with click-to-run language examples.
 - **Command palette** (`Ctrl/Cmd + K`, hinted on the trigger and in the palette footer): VS Code-style fuzzy search over lessons and quick actions — `opr` finds *Open REPL Playground*, title matches rank above body matches, and you can jump to any lesson, open the REPL or cheat sheet, or toggle the theme and font size. The footer advertises the full shortcut set (`⌘/Ctrl+K` open anytime, `↑/↓` navigate, `↵` select, `esc` close).
 - **Clickable outbound links** — Resources-style list items render as external links, and `http(s)://` URLs inside paragraph text auto-link. Both open in a **new tab** (`rel="noopener noreferrer"`) and show a hover tooltip with the destination domain.
-- **Two themes** — Kanagawa (dark) and Gruvbox (light) — plus adjustable text size.
+- **Two themes** — Kanagawa (dark) and Gruvbox (light) — plus adjustable text size. New visitors default to their **OS theme** (`prefers-color-scheme`, so macOS auto-switching at sunset is followed live); the palette's theme action pins a choice.
 - **Progress tracking + resume** in `localStorage`, and a course-complete
   celebration.
 - **Shareable deep-links** (`?lesson=<id>`, `?view=repl`, `?view=cheatsheet`).

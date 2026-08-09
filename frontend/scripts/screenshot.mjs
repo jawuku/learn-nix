@@ -45,8 +45,17 @@ try {
     if (m.type() === "error") errors.push(m.text().slice(0, 160));
   });
 
+  // The app's default theme follows the OS. Pin light here so the README shot
+  // is always the Gruvbox Light theme, independent of the machine running the script.
+  await page.emulateMediaFeatures([{ name: "prefers-color-scheme", value: "light" }]);
+
   console.log(`loading ${url} …`);
   await page.goto(url, { waitUntil: "networkidle2", timeout: 90000 });
+  // A previously saved pinned theme would override the OS preference, so clear
+  // storage (after navigation — localStorage is inaccessible on about:blank)
+  // and reload so the shot reflects the OS-following default.
+  await page.evaluate(() => localStorage.clear());
+  await page.reload({ waitUntil: "networkidle2", timeout: 90000 });
 
   // The runtime banner disappears once Tvix WASM has initialized.
   await page

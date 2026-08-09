@@ -89,7 +89,7 @@ const MIN_SCORE = -1000;
  */
 export function CommandPalette({ open, onOpenChange, onSelectLesson, onOpenRepl, onOpenCheatsheet }) {
   const { LESSONS, GROUPS } = useCourse();
-  const { themeKey, toggleTheme, changeFont } = useApp();
+  const { effectiveThemeKey, toggleTheme, changeFont } = useApp();
   const index = useMemo(() => buildIndex(LESSONS), [LESSONS]);
   const [q, setQ] = useState("");
 
@@ -100,7 +100,7 @@ export function CommandPalette({ open, onOpenChange, onSelectLesson, onOpenRepl,
   const query = q.trim();
 
   const actions = useMemo(() => {
-    const otherTheme = themeKey === "kanagawa" ? "Gruvbox" : "Kanagawa";
+    const otherTheme = effectiveThemeKey === "kanagawa" ? "Gruvbox" : "Kanagawa";
     const mk = (id, label, keywords, run, keepsOpen, icon) => ({
       id,
       label,
@@ -112,11 +112,11 @@ export function CommandPalette({ open, onOpenChange, onSelectLesson, onOpenRepl,
     return [
       mk("repl", "Open REPL Playground", ["terminal", "playground", "practice", "eval", "expression"], onOpenRepl, false, <TerminalSquare size={15} />),
       mk("cheatsheet", "Open Cheat Sheet", ["reference", "commands", "quick", "builtins", "shortcuts"], onOpenCheatsheet, false, <BookMarked size={15} />),
-      mk("theme", `Switch to ${otherTheme} theme`, ["appearance", "dark", "light", "mode", "colors"], toggleTheme, true, themeKey === "kanagawa" ? <Sun size={15} /> : <Moon size={15} />),
+      mk("theme", `Switch to ${otherTheme} theme`, ["appearance", "dark", "light", "mode", "colors"], toggleTheme, true, effectiveThemeKey === "kanagawa" ? <Sun size={15} /> : <Moon size={15} />),
       mk("font-inc", "Increase font size", ["text", "bigger", "larger", "zoom", "readability"], () => changeFont(1), true, <Plus size={15} />),
       mk("font-dec", "Decrease font size", ["text", "smaller", "zoom"], () => changeFont(-1), true, <Minus size={15} />),
     ];
-  }, [themeKey, toggleTheme, changeFont, onOpenRepl, onOpenCheatsheet]);
+  }, [effectiveThemeKey, toggleTheme, changeFont, onOpenRepl, onOpenCheatsheet]);
 
   // Prepared targets so repeated queries are cheap.
   const searchable = useMemo(() => {
