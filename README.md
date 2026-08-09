@@ -24,6 +24,8 @@ reused for Nix content: the UI (sidebar, themes, search, REPL playground,
 cheat sheet, progress tracking) is unchanged — only the course data and the
 browser evaluator were swapped.
 
+![Learn Nix — runnable lesson with the in-browser Nix evaluator](docs/screenshot.png)
+
 ---
 
 ## ✨ Features

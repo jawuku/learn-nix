@@ -176,6 +176,9 @@ Notes:
 - **CI does not run the smoke test** (it's browser-heavy) — that's on you
   before opening a PR, especially for changes touching the UI, REPL, palette,
   links, or the evaluator.
+- **Screenshot**: `yarn screenshot` (or `node scripts/screenshot.mjs [url]`)
+  regenerates the README screenshot (`docs/screenshot.png`) — boot the dev
+  server or point it at a static build with a URL argument, like the smoke test.
 
 ---
 

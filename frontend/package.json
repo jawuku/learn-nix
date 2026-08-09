@@ -39,6 +39,7 @@
     "audit:nix": "node scripts/audit-nix.mjs",
     "audit": "yarn audit:nix",
     "smoke": "node scripts/smoke-browser.mjs",
+    "screenshot": "node scripts/screenshot.mjs",
     "predeploy": "yarn build",
     "deploy": "gh-pages -d build"
   },
