@@ -65,6 +65,13 @@ browser evaluator were swapped.
 
 ---
 
+## ✍️ Built with
+
+- **Initial UI** by [Emergent AI](https://app.emergent.sh)
+- **Course content & enhancements** by the [Freebuff CLI](https://freebuff.com/cli)
+
+---
+
 ## ✅ Prerequisites
 
 - **Node.js 22+** (LTS recommended; `puppeteer` requires ≥ 22.12)
@@ -268,6 +275,30 @@ prove the WASM runtime boots in-browser and snippets/exercises/cheat-sheet
 work end-to-end. It needs a dev server on `AUDIT_BASE_URL` (default
 `http://localhost:3000`) and the `puppeteer` devDependency (which downloads
 its own Chrome; set `PUPPETEER_SKIP_DOWNLOAD=1` and `CHROME_PATH` to skip).
+
+---
+
+## 🐚 Freebuff CLI via a NixOS flake
+
+This course was authored and polished with the **Freebuff CLI** — an agentic
+coding assistant that runs from your terminal. If you'd like to use it the
+Nix way, the [freebuff-nix flake](https://github.com/jawuku/freebuff-nix)
+packs Node.js into an FHS environment (`buildFHSEnvBubblewrap`), so `npx
+freebuff` runs on NixOS and other Nix systems without patching:
+
+```bash
+# Start a new Freebuff session
+nix run github:jawuku/freebuff-nix
+
+# Resume a previous session (anything after -- is forwarded to the CLI)
+nix run github:jawuku/freebuff-nix -- --continue 2026-08-01T15-51-31.852Z
+```
+
+The FHS environment is prebuilt once and shared through a
+[Cachix binary cache](https://freebuff-nix.cachix.org), so first run is the
+only slow one. It can also be installed declaratively as a NixOS flake input
+— see the repo's README for the `nixosConfiguration` snippet. This is the
+same flake the **FHS Environments** lesson uses as its worked example.
 
 ---
 
