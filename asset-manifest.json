@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "./static/css/main.1a6a99f8.css",
+    "main.js": "./static/js/main.b030006f.js",
+    "static/media/nix_eval_bg.wasm": "./static/media/nix_eval_bg.85e179e935458b967982.wasm",
+    "index.html": "./index.html",
+    "main.1a6a99f8.css.map": "./static/css/main.1a6a99f8.css.map",
+    "main.b030006f.js.map": "./static/js/main.b030006f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1a6a99f8.css",
+    "static/js/main.b030006f.js"
+  ]
+}
