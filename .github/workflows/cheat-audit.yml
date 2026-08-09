@@ -1,0 +1,44 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+
+jobs:
+  content-audit:
+    name: Nix content audit
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: yarn
+          cache-dependency-path: frontend/yarn.lock
+
+      - name: Install dependencies
+        working-directory: frontend
+        env:
+          # CI only runs the Node audit; skip puppeteer's Chrome download.
+          PUPPETEER_SKIP_DOWNLOAD: "1"
+        run: yarn install --frozen-lockfile
+
+      # Node-only audit: evaluates every runnable snippet, exercise solution
+      # and cheat-sheet example with nix-eval (Tvix WASM) — the same evaluator
+      # the app runs in the browser. Exits non-zero on any problem.
+      - name: Audit snippets, exercises and cheat sheet
+        working-directory: frontend
+        env:
+          AUDIT_REPORT: nix-audit-report.json
+        run: node scripts/audit-nix.mjs
+
+      - name: Upload audit report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: nix-audit-report
+          path: frontend/nix-audit-report.json
+          if-no-files-found: ignore
