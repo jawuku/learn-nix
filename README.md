@@ -67,7 +67,7 @@ browser evaluator were swapped.
 
 ## ✅ Prerequisites
 
-- **Node.js 18+** (LTS recommended)
+- **Node.js 22+** (LTS recommended; `puppeteer` requires ≥ 22.12)
 - **Yarn** (Classic v1). Install with `npm install -g yarn` if you don't have it.
 
 ---

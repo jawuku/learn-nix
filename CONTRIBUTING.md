@@ -18,7 +18,7 @@ yarn smoke          # full browser smoke test (run before opening a PR)
 
 ## 🧰 Prerequisites
 
-- **Node.js 18+** (the CI workflow pins Node 20)
+- **Node.js 22+** (the CI workflow pins Node 22; `puppeteer` requires ≥ 22.12)
 - **Yarn Classic v1** (`npm install -g yarn`) — use **Yarn, not npm**; the
   lockfile and `resolutions` are Yarn-based.
 
