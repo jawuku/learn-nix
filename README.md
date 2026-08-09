@@ -1,5 +1,7 @@
 # Learn Nix — in your browser
 
+[![CI (content audit)](https://github.com/jawuku/learn-nix/actions/workflows/cheat-audit.yml/badge.svg)](https://github.com/jawuku/learn-nix/actions/workflows/cheat-audit.yml)
+
 An interactive, **runnable Nix curriculum** — a ~12-week course for developers
 with basic command-line experience, taught entirely in the browser. Every
 lesson is written in plain English, code is syntax-highlighted, and **pure Nix
@@ -73,7 +75,7 @@ browser evaluator were swapped.
 ## 🚀 Getting Started (run locally)
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/jawuku/learn-nix.git
 cd learn-nix/frontend
 
 # 2. Install dependencies (use yarn, not npm)
