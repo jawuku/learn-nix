@@ -1,0 +1,68 @@
+name: 🐛 Bug report
+description: Something in the course or the app isn't working as expected
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for filing a bug! Before submitting, please:
+        - Search [existing issues](https://github.com/jawuku/learn-nix/issues) for duplicates
+        - Include the exact **lesson id** or URL (`?lesson=…`) if this is about lesson content
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you expect, and what actually happened?
+      placeholder: "Example: Lesson 'let-in' — running `1 + 2` shows no result…"
+    validations:
+      required: true
+  - type: input
+    id: lesson
+    attributes:
+      label: Lesson / URL
+      description: Which lesson or view were you on? (e.g. `?lesson=let-in`, `?view=repl`)
+      placeholder: "?lesson=let-in"
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open the app
+        2. Navigate to …
+        3. Run `…`
+        4. See error
+    validations:
+      required: true
+  - type: textarea
+    id: code
+    attributes:
+      label: Nix code involved
+      description: If a snippet/exercise failed, paste the code here (or say "n/a")
+      render: nix
+  - type: dropdown
+    id: area
+    attributes:
+      label: Where does the bug live?
+      options:
+        - Lesson content / curriculum
+        - In-browser evaluator (runnable snippets, REPL)
+        - UI / layout / themes
+        - Command palette / navigation
+        - Links / tooltips
+        - Build / CI / deployment
+        - Not sure
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser & version
+      placeholder: "Chrome 131, Firefox 133, Safari 18…"
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Quick checks
+      options:
+        - label: I can reproduce this on the latest build (`yarn build` + `yarn smoke`)
+        - label: I searched existing issues first

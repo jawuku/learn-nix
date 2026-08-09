@@ -1,0 +1,46 @@
+name: ✨ Feature request
+description: Suggest an improvement to the course content or the app
+title: "[Feature]: "
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the idea! For **lesson content** changes, note that every lesson in
+        `frontend/src/data/nixPart1..3.js` mirrors `curriculum.md` — proposals should
+        describe the change at the content level and we'll keep both in sync.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What's the problem or gap?
+      description: What are you trying to do that the course/app doesn't cover yet?
+      placeholder: "Example: the Fetchers lesson doesn't explain `nix store prefetch-file`…"
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+      description: What would you like added or changed? Feel free to sketch the content.
+      placeholder: "A new section in Module 2 covering… / A new UI feature that…"
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of change is this?
+      options:
+        - Lesson content (new/updated lessons, exercises)
+        - In-browser runtime / evaluator
+        - UI / UX / themes
+        - Developer tooling / CI / docs
+        - Other
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Contribution intent
+      options:
+        - label: I'd like to implement this myself (see CONTRIBUTING.md)
+        - label: This is a suggestion only — happy for anyone to pick it up
